@@ -73,7 +73,7 @@ public class POJO_Game {
 		this.g_producer = g_producer;
 		this.g_platform = g_platform;
 	}
-	// Gets and sets
+	// Getters and setters
 
 	public Long getId() {
 		return id;
