@@ -115,6 +115,51 @@ As mentioned above, as the ID no longer exists the boolean in the method returns
 
 ## Database screenshots
 
+![image](https://user-images.githubusercontent.com/92368003/152246993-49e87ae1-8e56-4228-946e-0242f34ea3a0.png)
+
+The above image is for posterity, to show the database is empty before I demonstrate that the data posted by my CRUD functionality persists within MySQL.
+
+### Create
+
+![image](https://user-images.githubusercontent.com/92368003/152247821-7e39556c-0faf-4fd6-aff6-ffb1d2cf8d09.png)
+
+Post request in Postman.
+
+![image](https://user-images.githubusercontent.com/92368003/152247878-20947942-1740-4ff8-884b-a56ed17ea212.png)
+
+Data persisting within MySQL.
+
+### Read
+
+![image](https://user-images.githubusercontent.com/92368003/152248825-4b19f18a-53fb-4d00-9213-fbe055b86b06.png)
+
+Added new entities in Postman for the purpose of showing a Get request
+
+![image](https://user-images.githubusercontent.com/92368003/152248951-ee2d3aae-373e-4e09-baf0-31fea9d2039a.png)
+
+Then the resulting entities persisting within MySQL
+
+### Update
+
+![image](https://user-images.githubusercontent.com/92368003/152249669-8f2518ec-578d-432f-88a8-3662c4043520.png)
+
+Update done by utilising a Post request in Postman, changing the entitiy related to ID 7
+
+![image](https://user-images.githubusercontent.com/92368003/152249755-9f44e03e-8460-4420-906f-969408f887f0.png)
+
+Update persisting within MySQL, which shows that only the data related to ID 7 has been changed, whilst the previous data persists.
+
+### Delete
+
+![image](https://user-images.githubusercontent.com/92368003/152249944-9c67169e-df7f-4e55-b8b4-e35e83a280fd.png)
+
+Delete request within Postman, deleting entity of ID 7 that was updated in the previous section
+
+![image](https://user-images.githubusercontent.com/92368003/152250081-38db066f-4f93-47e1-8fa8-a117de00b330.png)
+
+Delete persisting with MySQL, entity of ID 7 has been deleted
+
+
 ## Test coverage screenshots
 
 ## Jira board
