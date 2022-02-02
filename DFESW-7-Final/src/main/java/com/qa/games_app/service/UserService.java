@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.qa.games_app.data.entity.Games;
 import com.qa.games_app.data.repository.UserRepository;
+import com.qa.games_app.exceptions.GameNotFoundException;
 
 @Service
 public class UserService {
@@ -35,6 +36,12 @@ public class UserService {
 		
 	}
 	
+		public Games getById(Long id) {
+			if(repo.existsById(id)) {
+				return repo.findById(id).get();
+			}
+			throw new GameNotFoundException("Game with id " + id + " cannot be found");
+		}
 	
 		public Games updateGame(Long id, Games newGame) {
 		// Use findByID - returns optional so requires optional method
