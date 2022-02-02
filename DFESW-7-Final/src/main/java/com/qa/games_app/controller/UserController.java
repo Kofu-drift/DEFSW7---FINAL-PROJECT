@@ -39,6 +39,12 @@ public class UserController {
 		return this.service.getAllGames();
 		
 	}
+	
+	@GetMapping("/getById/{id}")
+	public Games getByID(@PathVariable Long id) {
+		return this.service.getById(id);
+	}
+	
 	@PutMapping("/update/{id}")
 	public Games updateGames(@PathVariable Long id, @RequestBody Games game) {
 		return this.service.updateGame(id, game);
