@@ -1,5 +1,5 @@
 # DFESW7---FINAL-PROJECT
-Final project for cohort DESFW7 for QA's Software Development boot camp
+Final project for cohort DFESW7 for QA's Software Development boot camp
 
 ## Why are we doing this?
 For the final project of our DfE Software Development bootcamp we were tasked with creating a fully functioning API.
