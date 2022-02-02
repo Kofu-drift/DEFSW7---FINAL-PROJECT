@@ -54,51 +54,64 @@ The biggest problem I encountered was getting data to persist within MySQL. Alth
 ## Possible improvements for future revisions of the project
 
 ## Postman screenshots and API output
-Within my project I abstracted my CRUD functionality by using both a service and a controller class
+Within my project I abstracted my CRUD functionality by using both a service and a controller class. In the following I will show the methods as they can be seen within the server class and then how they are abstracted into the controller class. As well, I will show Postman using this CRUD functionality.
 
-
-### Service class methods
-
-#### Create - addGame()
+### Create - addGame()
 
 ![image](https://user-images.githubusercontent.com/92368003/152183282-8f8507f4-e23b-4366-a5ce-9f044cf178ef.png)
 
 This piece of code takes in a value of the entity game and then returns value and saves it to the repository using a depency injection of my repository interface.
 
-#### Read - getAllGames()
+![image](https://user-images.githubusercontent.com/92368003/152239809-5e9c5e76-24a2-41ba-8855-913152b2a833.png)
+
+Abstraction to the controller class.
+
+![image](https://user-images.githubusercontent.com/92368003/152240121-80d8b22f-be7e-4c36-ab00-524c210cef3e.png)
+
+Postman displaying the Post request that has inputted data that matches the attributes of the entity class present within the project.
+
+### Read - getAllGames()
 
 ![image](https://user-images.githubusercontent.com/92368003/152183879-f43a6c18-aef6-4ee3-b696-54bfe8e2e737.png)
 
 The above creates a list within the IDE then uses a dependency injection to return all of entities within the table.
 
-#### Update - updateGames()
+![image](https://user-images.githubusercontent.com/92368003/152240691-8d3284d2-33de-427d-95b5-919d53138e1a.png)
+
+Abstracted method in controller class.
+
+![image](https://user-images.githubusercontent.com/92368003/152240832-316db604-85ca-497a-9a68-2225fec987b9.png)
+
+Get request within Postman, displaying all entities within the database
+
+### Update - updateGames()
 
 ![image](https://user-images.githubusercontent.com/92368003/152184613-74eb4baa-4c27-44e1-9d68-87e96f74ea97.png)
 
 Creates a variable of "update" which grabs the entity that contains the ID inputted. Using this variable we then update the attributes for the entity using "update.setX(newGame.getX())". After this new information is saved to the value "newGame" it is then retuned back to the repository.
 
-#### Delete - removeGame()
+![image](https://user-images.githubusercontent.com/92368003/152240975-b3a950e5-7629-4edb-b6e2-0dca9ab02c9e.png)
+
+Abstracted method in controller class
+
+![image](https://user-images.githubusercontent.com/92368003/152241275-f566ec79-65b7-4325-80b2-67e74dae4653.png)
+
+As can be seen in the above image, the attributes can be changed by the update request, which will then relate to the tables in MySQL they relate to. The ID does not change as it is automatically generated, and allows us to see that the specific data we are changing is accurate to the ID we input.
+
+
+### Delete - removeGame()
 
 ![image](https://user-images.githubusercontent.com/92368003/152186883-4330a1a6-cbe3-4dd2-8b87-ad840a58f97b.png)
 
 Delete method is set as a boolean so that Postman will return a true if the entity has been deleted properly. The repository deletes by the ID given and then a variable of "exists" is created which checks the repository for the ID that has been deleted. If the ID doesn't exists, it then returns true if the ID no longer exists.
 
-### Controller Class Methods
+![image](https://user-images.githubusercontent.com/92368003/152243051-2db00070-b7bb-4071-ad8a-352957706d48.png)
 
-![image](https://user-images.githubusercontent.com/92368003/152187660-7e6c6582-58d7-49a0-8c3f-25a9581f5b1b.png)
+Abstracted method in the controller class
 
-The controller class is given the @RestController bean in order to allow @RequestMapping beans within to function properly
+![image](https://user-images.githubusercontent.com/92368003/152243141-0627505f-a78b-4a8a-94ab-525e05a40755.png)
 
-![image](https://user-images.githubusercontent.com/92368003/152188997-7341a329-fab8-4bf7-8da6-04328fc4c21c.png)
-
-For expediencies sake the above methods correlate the CRUD functionality described in the Service Class Methods section, but the logic is abstracted away and using the instance of the service class allows us to call those methods into our controller class. As well the @RequestMapping assigned to each of the methods allows us to use Postman to set HTML CRUD requests using the aissgned paths.
-
-
-
-#### 
-
-
-
+As mentioned above, as the ID no longer exists the boolean in the method returns true.
 
 ## Database screenshots
 
