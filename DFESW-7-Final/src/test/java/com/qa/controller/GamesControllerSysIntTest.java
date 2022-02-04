@@ -57,6 +57,13 @@ public class GamesControllerSysIntTest {
 		nextNewElementsId = games.get(size - 1).getId() + 1;
 
 	}
+	
+	 
+	  @AfterEach
+	  public void teardown() {
+	    repo.deleteAll();
+	  }
+	  
 
 	@Test
 	public void createTest() throws Exception {
@@ -112,7 +119,7 @@ public class GamesControllerSysIntTest {
 
 	@Test
 	public void updateGamesTest() throws Exception {
-		Long testId = 2l;
+		Long testId = games.get(0).getId();
 		Games testGameUpdate = new Games("Sonic the hedgehog", "Platformer", "1980", "Sega", "Sega", "Sega Genesis");
 		Games expectedGame = new Games(testId, "Sonic the hedgehog", "Platformer", "1980", "Sega", "Sega",
 				"Sega Genesis");
