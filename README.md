@@ -23,6 +23,7 @@ Precise documentation of this project is also a requirement, of which this READM
 * Jira
 * GitBash
 * GitHub
+* Junit
 
 ### My Project - Video game repository
 For my final project I decided to create a video games database. I decided on this topic because I have an active interest in gaming
@@ -45,11 +46,11 @@ I was initally hesitant as the project spec revolved heavily around those concep
 my knowledge that might potentially form a large blocker. However, I believed that if I was able to overcome these hurdles the rest of the project would run smoothly as the documentation side of things was something I felt comfortable with. I was also confident in my skills using Jira, GitBash, and GitHub. As I was comfortable using the aforementioned resources I felt optimistic about my ability to modularise my workflow, so I didn't overburden myself by trying to build too much code at the same time. I felt the best way to do this was to document alongside my coding, whilst also working through concepts I didn't understand well using the documents given to me by QA to reinforce my knowledge.
 
 ## What went well?
-Surprisingly, the challnges I described above are the parts of the project that went the smoothest for me. Being able to access the QA community website in order to re familiarise myself with the concepts proved incredibly successful and led to me being able to complete CRUD functionality and Postman communication tests being completed within the same day. This free'd up a large amount of time that I had allocated to myself in order to achieve this task so I was able to implement the stretch goal of adding a custom exception to my code. I also feel that my Jira board was incredibly useful, by being able to track tasks individually I was able to build my project in small chunks which stopped me overwhelming myself by setting unreasonable goals. (Finish when testing is done)
+Surprisingly, the challnges I described above are the parts of the project that went the smoothest for me. Being able to access the QA community website in order to re familiarise myself with the concepts proved incredibly successful and led to me being able to complete CRUD functionality and Postman communication tests being completed within the same day. This free'd up a large amount of time that I had allocated to myself in order to achieve this task so I was able to implement the stretch goal of adding a custom exception to my code. I also feel that my Jira board was incredibly useful, by being able to track tasks individually I was able to build my project in small chunks which stopped me overwhelming myself by setting unreasonable goals. The majority of Testing went well, and I was able to achieve over 80% coverage of main.
 
 
 ## What didn't go as planned
-The biggest problem I encountered was getting data to persist within MySQL. Although I was able to use Postman for my CRUD functionality I was unable to get the data to then persist outside of that in the MySQL schema. I managed to fix this by creating a new table from within my IDE to MySQL after that was able to successfully get the data to persist. I also had a smaller problem where instead of storing my data within a JPA repository, I had coded it to store within an array list but this was fairly simple problem to fix.
+The biggest problem I encountered was getting data to persist within MySQL. Although I was able to use Postman for my CRUD functionality I was unable to get the data to then persist outside of that in the MySQL schema. I managed to fix this by creating a new table from within my IDE to MySQL after that was able to successfully get the data to persist. I also had a smaller problem where instead of storing my data within a JPA repository, I had coded it to store within an array list but this was fairly simple problem to fix. Unfortunately, I also was accidentally doing test coverage on production instead of dev, which let to some compilation errors lkater when trying to package my app with Maven. To fix this, I checked for any persistant data in MySQL that was causing testing errors, used Postman to delete it, and then was able to succesfully package my app.
 
 ## Possible improvements for future revisions of the project
 
@@ -158,7 +159,7 @@ Delete request within Postman, deleting entity of ID 7 that was updated in the p
 ![image](https://user-images.githubusercontent.com/92368003/152250081-38db066f-4f93-47e1-8fa8-a117de00b330.png)
 
 Delete persisting with MySQL, entity of ID 7 has been deleted
-
+-
 
 ## Test coverage screenshots
 
