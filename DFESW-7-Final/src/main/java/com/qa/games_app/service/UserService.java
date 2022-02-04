@@ -1,10 +1,12 @@
 package com.qa.games_app.service;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.qa.games_app.data.entity.Games;
@@ -43,11 +45,10 @@ public class UserService {
 			throw new GameNotFoundException("Game with id " + id + " cannot be found");
 		}
 	
-		public Games updateGame(Long id, Games newGame) {
-		// Use findByID - returns optional so requires optional method
-//			Optional<Games> existingOptional = this.repo.findById(id);
+		public Games updateGame(long id, Games newGame) {
+
 			Games update = this.repo.getById(id);
-//			Games existing = existingOptional.get();
+
 			// update the data
 			update.setgDeveloper(newGame.getgDeveloper());
 			update.setgGenre(newGame.getgGenre());
@@ -61,7 +62,7 @@ public class UserService {
 	}
 	
 	// Delete is a boolean to show whether the delete method has functioned properly
-		public boolean removeGame(Long id) {
+		public boolean removeGame(long id) {
 		this.repo.deleteById(id);
 		// Checks repo to see if the id still exists
 		boolean exist = this.repo.existsById(id);
