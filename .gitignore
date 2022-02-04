@@ -117,8 +117,8 @@ hs_err_pid*
 replay_pid*
 
 ### Maven ###
-/target/*
-!/target/*.jar
+DFESW-7-Final/target/*
+!/DFESW-7-Final/target/*.jar
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
