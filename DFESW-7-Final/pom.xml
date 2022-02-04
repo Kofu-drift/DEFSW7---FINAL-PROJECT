@@ -16,7 +16,7 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-<dependency>
+		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
@@ -56,6 +56,17 @@
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+
+			<groupId>nl.jqno.equalsverifier</groupId>
+
+			<artifactId>equalsverifier</artifactId>
+
+			<version>3.6</version>
+
+			<scope>test</scope>
+
 		</dependency>
 	</dependencies>
 

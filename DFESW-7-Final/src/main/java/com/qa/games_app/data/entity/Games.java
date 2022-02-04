@@ -68,7 +68,7 @@ public class Games {
 		this.gTitle = gTitle;
 		this.gGenre = gGenre;
 		this.rDate = rDate;
-		this.gDeveloper = gDeveloper;
+		this.gDeveloper = gDeveloper; 
 		this.gProducer = gProducer;
 		this.gPlatform = gPlatform;
 	}
@@ -155,12 +155,9 @@ public class Games {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(gDeveloper, gGenre, gPlatform, gProducer, gTitle, id, rDate);
+		return Objects.hash(gDeveloper, gGenre, gPlatform, gProducer, gTitle, rDate);
 	}
 
-	// Auto-Generate equals method 
-	
-	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -172,10 +169,13 @@ public class Games {
 		Games other = (Games) obj;
 		return Objects.equals(gDeveloper, other.gDeveloper) && Objects.equals(gGenre, other.gGenre)
 				&& Objects.equals(gPlatform, other.gPlatform) && Objects.equals(gProducer, other.gProducer)
-				&& Objects.equals(gTitle, other.gTitle) && Objects.equals(id, other.id)
-				&& Objects.equals(rDate, other.rDate);
+				&& Objects.equals(gTitle, other.gTitle) && Objects.equals(rDate, other.rDate);
 	}
 
+	
+	
+	
+	
 	
 	
 	
