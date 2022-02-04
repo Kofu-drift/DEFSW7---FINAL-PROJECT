@@ -42,7 +42,7 @@ so populating the database would be easy as I have a knowledge base of the subje
 * Original release date
 * Platform (Console, PC) it is available on
 
-I took some inspiration from the website GiantBomb.com which aside from being a news aggregator also acts as an encyclopedia of video games. 
+I took some inspiration from the website [GiantBomb.com](https://www.giantbomb.com/) which aside from being a news aggregator also acts as an encyclopedia of video games. 
 I have used JPA for the repository and the data then persists inside of MySQL. I have used Postman to test my CRUD functioality and will be using
 H2 as on-memory database for testing purposes
  </details> 
