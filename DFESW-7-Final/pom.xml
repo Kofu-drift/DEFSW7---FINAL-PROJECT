@@ -10,7 +10,7 @@
 	<groupId>com.qa</groupId>
 	<artifactId>DFESW-7-Final</artifactId>
 	<!-- Semver = Major.Minor.Patch/Bugfix - SNAPSHOT/RELEASE -->
-	<version>1.0.0-RELEASE</version>
+	<version>1.0.1-RELEASE</version>
 	<name>DFESW-7-Final</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
